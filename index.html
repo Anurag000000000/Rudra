@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BADSHAAH BHAI ™</title>
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID_HERE'); // Yahan apna Pixel ID daalein
+    fbq('track', 'PageView');
+    </script>
+    
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            /* BACKGROUND IMAGE YAHAN CHANGE KAREIN */
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff; 
+            font-family: 'Arial', sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            text-align: center; 
+        }
+        
+        .container { 
+            width: 90%; 
+            max-width: 400px; 
+            padding: 20px; 
+            background: rgba(0, 0, 0, 0.6); /* Container ko thoda transparent kiya hai taaki background dikhe */
+            border-radius: 20px;
+            backdrop-filter: blur(5px); /* Isse background halka blur dikhega premium look ke liye */
+            border: 1px solid rgba(241, 196, 15, 0.3);
+        }
 
+        .profile-pic { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #f1c40f; margin: 15px 0; }
+        .number-timer { font-size: 50px; font-weight: 900; color: #f1c40f; text-shadow: 0 0 15px rgba(241, 196, 15, 0.6); margin-bottom: 20px; }
+        .stats-box { text-align: left; display: inline-block; margin-bottom: 25px; }
+        .stat-line { font-size: 16px; font-weight: bold; margin: 10px 0; display: flex; align-items: center; }
+        .check-icon { color: #f1c40f; margin-right: 10px; }
+        .telegram-btn { background-color: #f1c40f; color: #000; text-decoration: none; display: block; padding: 18px; border-radius: 12px; font-size: 20px; font-weight: 900; animation: pulse 1.2s infinite; }
+        
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(0.97); } 100% { transform: scale(1); } }
+        
+        .footer-promo { margin-top: 25px; font-size: 14px; color: #ccc; }
+        .promo-id { color: #00d2ff; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>BADSHAAH BHAI ™</h2>
+        <img src="logo.png" alt="Logo" class="profile-pic">
+        
+        <div class="number-timer" id="timer">30</div>
+
+        <div class="stats-box">
+            <div class="stat-line"><span class="check-icon">✔️</span> 90/88 MATCH PASSED RECORD 🏆</div>
+            <div class="stat-line"><span class="check-icon">✔️</span> Oldest CRICKET Tipper Since 2011 🏆</div>
+            <div class="stat-line"><span class="check-icon">✔️</span> 44/42 BBL MATCHES PASSED RECORD 🏆</div>
+        </div>
+
+        <a href="https://t.me/+LcBp8kqcTWA1M2Jl" class="telegram-btn" onclick="fbq('track', 'Subscribe');">
+            SUBSCRIBE BADSHAAH<br>™ TELEGRAM
+        </a>
+
+        <div class="footer-promo">
+            For paid promotion - 
+            <a href="https://t.me/Prx23" class="promo-id" onclick="fbq('track', 'Contact');">@Prx23</a>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 30;
+        const timerDisplay = document.getElementById('timer');
+        function startCountdown() {
+            setInterval(() => {
+                if (timeLeft <= 0) { timeLeft = 30; }
+                else { timeLeft--; }
+                timerDisplay.innerText = timeLeft < 10 ? "0" + timeLeft : timeLeft;
+              }, 1000);
+        }
+        startCountdown();
+    </script>
+</body>
+</html>
